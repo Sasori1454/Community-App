@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aniverse - Your Anime Rating Community</title>
+
+    <meta name="description"
+        content="Aniverse is a community-driven anime ratings site. Discover, rate, and see the Top 10 anime based on community votes." />
+    <meta name="keywords" content="anime ratings, top anime, anime ranking, best anime, community votes, Aniverse" />
+    <meta name="author" content="Aniverse" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ff4081" />
+    <link rel="canonical" href="https://example.com/aniverse" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aniverse" />
+    <meta property="og:title" content="Aniverse — Community Anime Ratings & Top 10" />
+    <meta property="og:description"
+        content="Rate your favorite anime and explore the community-powered Top 10 rankings." />
+    <meta property="og:url" content="https://example.com/aniverse" />
+    <meta property="og:image" content="images/og-image.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aniverse — Community Anime Ratings & Top 10" />
+    <meta name="twitter:description"
+        content="Rate your favorite anime and explore the community-powered Top 10 rankings." />
+    <meta name="twitter:image" content="images/og-image.jpg" />
+
+    <link rel="icon" type="image/png" sizes="64x64" href="./ANIVERSE (1).png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./ANIVERSE (1).png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./ANIVERSE (1).png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./ANIVERSE (1).png">
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="./ANIVERSE (1).png" alt="Aniverse Logo" class="logo-img" onerror="this.style.display='none'">
+                <span> Aniverse</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#ratings">Ratings</a></li>
+                <li><a href="#top10">Top 10</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">🌸 Welcome to Aniverse 🌸</h1>
+            <p class="hero-subtitle">Discover, Rate, and Share Your Favorite Anime</p>
+            <p class="hero-description">Join our community of anime enthusiasts and help us rank the best anime of all
+                time!</p>
+            <a href="#ratings" class="cta-button">Start Rating Now</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Aniverse</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-icon">⭐</div>
+                    <h3>Rate Anime</h3>
+                    <p>Share your opinion by rating your favorite anime from 1 to 5 stars</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🏆</div>
+                    <h3>Top Rankings</h3>
+                    <p>See which anime rise to the top based on community ratings</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">👥</div>
+                    <h3>Community Driven</h3>
+                    <p>Your ratings matter! Help build the ultimate anime ranking list</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ratings" class="ratings">
+        <div class="container">
+            <h2 class="section-title">Rate Your Favorite Anime</h2>
+            <p class="section-description">Choose a rating from 1-5 stars and submit your vote!</p>
+
+            <div class="spreadsheet-container">
+                <iframe
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRDIhZW7onnv21E3jHd5Gc-rlFskYBds9tCwZa_61_mzO-cAfANzJYrtwzvgkte8B924JAwoBx7vuvZ/pubhtml?widget=true&amp;headers=false"
+                    class="ratings-iframe">
+                </iframe>
+            </div>
+
+            <div class="ratings-actions">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK6HPisvpxP95JLcq6q7AYoIcwW8Nq2AbzUTBBG4F_f6E-yQ/viewform?usp=dialog"
+                    target="_blank" rel="noopener" class="view-full-sheet">📝 Submit Rating Form</a>
+            </div>
+
+            <div class="anime-list" id="animeList"></div>
+        </div>
+    </section>
+
+    <section id="top10" class="top10">
+        <div class="container">
+            <h2 class="section-title">🔥 Top 10 Rated Anime 🔥</h2>
+            <p class="section-description">The highest rated anime based on community votes</p>
+            <div class="top10-actions">
+                <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRDIhZW7onnv21E3jHd5Gc-rlFskYBds9tCwZa_61_mzO-cAfANzJYrtwzvgkte8B924JAwoBx7vuvZ/pubhtml"
+                    target="_blank" class="view-full-sheet">
+                    📊 View Full Spreadsheet
+                </a>
+                <button onclick="fetchTop10FromSheets()" class="refresh-btn">
+                    🔄 Refresh Rankings
+                </button>
+            </div>
+            <div class="top-list" id="topList"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-description">Have suggestions or feedback? We'd love to hear from you!</p>
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/Aiku1454@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Aniverse Contact Form Submission">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none">
+
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required />
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="social-links">
+                <p>Follow us on social media:</p>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com/@suraimu4210" target="_blank" class="social-icon">
+                        <i class="fa-brands fa-tiktok"></i> TikTok
+                    </a>
+                    <a href="https://www.instagram.com/sasori_1454/" target="_blank" class="social-icon">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://github.com/Sasori1454" target="_blank" class="social-icon">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Aniverse. All rights reserved. Made with 💜 for anime fans.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
