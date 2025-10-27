@@ -155,11 +155,6 @@ function displayTop10(animeList) {
 
     topList.innerHTML = animeList.map((anime, index) => {
         const rank = index + 1;
-        let medal = '';
-        if (rank === 1) medal = '🥇';
-        else if (rank === 2) medal = '🥈';
-        else if (rank === 3) medal = '🥉';
-        else medal = `#${rank}`;
 
         const ratingVal = Number(anime.rating);
         const votesNum = Number.isFinite(anime.votes) ? anime.votes : parseInt(anime.votes || '0', 10) || 0;
@@ -167,7 +162,7 @@ function displayTop10(animeList) {
 
         return `
             <div class="top-card">
-                <span class="rank">${medal}</span>
+                <span class="rank">#${rank}</span>
                 <h4>${anime.name}</h4>
                 <div class="rating-meta">⭐ ${ratingVal.toFixed(2)} avg · 📊 ${votesNum} ${voteLabel}</div>
             </div>
