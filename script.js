@@ -103,6 +103,23 @@ function clearLocalStorage() {
 document.addEventListener('DOMContentLoaded', () => {
     renderAnimeList();
     fetchTop10FromSheets();
+
+    const burger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.nav-menu');
+    if (burger && menu) {
+        burger.addEventListener('click', () => {
+            const isOpen = menu.classList.toggle('open');
+            burger.classList.toggle('active', isOpen);
+            burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                burger.classList.remove('active');
+                burger.setAttribute('aria-expanded', 'false');
+            }
+        }));
+    }
 });
 
 async function fetchTop10FromSheets() {
